@@ -36,5 +36,13 @@
 
 
 
-#### 线索化二叉树
+#### 线索化二叉树×
+
+#### B树，B+树
+
+B树，节点和叶子节点都有数据
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210426204736771.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDc3MTU4Mg==,size_16,color_FFFFFF,t_70)
+
+B+树，数据存放在叶子节点的数据链表中
 
