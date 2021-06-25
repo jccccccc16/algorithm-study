@@ -6,9 +6,13 @@
 
 ### 动态规划背包问题
 
+打表
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210507101742556.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDc3MTU4Mg==,size_16,color_FFFFFF,t_70)
 
 **运作**
+
+**能放进来：判断上一个，与我的价值和上一层剩余的重量的价值，两者的最大值**
 
 当物品为吉他时：
 
@@ -26,9 +30,11 @@
 
 ​	当背包为4磅时，判断上一个单元，与电脑和吉他（为何选择吉他，因为放入电脑，然后当前背包减去电脑重量还剩1磅只有吉他），比较他们谁的价值大
 
-**公式**
+**公式**(重要)
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210507101842330.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDc3MTU4Mg==,size_16,color_FFFFFF,t_70)
+
+
 
 ### 解
 

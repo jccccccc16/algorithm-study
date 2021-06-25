@@ -67,11 +67,15 @@ public static void main(String[] args) {
 
 ##### 深度优先
 
-遍历第一个邻接点，对应的isVisited设置为true
+- 输出，并且isVisist设置为true
 
-获取邻接节点并且isVisited为false
+- 遍历邻接节点，如果邻接节点没有被访问，那么递归遍历该节点
 
-递归该节点
+  ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021062516261163.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDc3MTU4Mg==,size_16,color_FFFFFF,t_70)
+
+  ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210625162658163.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDc3MTU4Mg==,size_16,color_FFFFFF,t_70)
+
+  没有邻接节点了！，结束！（基线条件）
 
 ```java
 /**
@@ -84,12 +88,13 @@ public static void main(String[] args) {
         // 设置为已被遍历
         isVisited[i] = true;
         boolean flag = true;
+      
         for(int index=0;index<getNumOfVertexSize();index++){
             if(!isVisited[index]){
                 flag=false;
             }
         }
-        // 基线条件，当isVisit全部为true时
+        // 基线条件，当isVisit全部为true时，该节点的所有邻接节点都被访问
         if(flag){
             return;
         }
@@ -105,6 +110,16 @@ public static void main(String[] args) {
 
 
 
+
+
+
+
+
+
+
+
 ##### 广度优先
 
-遍历自己的一圈又一圈
+- 先访问自己
+- 在访问邻接节点，并放入队列
+- 取出第一个，递归
