@@ -69,13 +69,15 @@ public static void main(String[] args) {
 
 - 输出，并且isVisist设置为true
 
-- 遍历邻接节点，如果邻接节点没有被访问，那么递归遍历该节点
+- 遍历邻接节点，如果邻接节点没有被访问，那么递归遍历该节点的邻接节点
+
+- 如果节点没有未访问的邻接节点，那么回退（看代码）
 
   ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021062516261163.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDc3MTU4Mg==,size_16,color_FFFFFF,t_70)
 
   ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210625162658163.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDc3MTU4Mg==,size_16,color_FFFFFF,t_70)
 
-  没有邻接节点了！，结束！（基线条件）
+  - 没有邻接节点了！，结束！（基线条件）
 
 ```java
 /**
@@ -123,3 +125,4 @@ public static void main(String[] args) {
 - 先访问自己
 - 在访问邻接节点，并放入队列
 - 取出第一个，递归
+
